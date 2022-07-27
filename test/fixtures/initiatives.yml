@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  start_date: 2022-07-27
+  end_date: 2022-07-27
+  type_metric: MyString
+  strat_value: 9.99
+  target: 9.99
+  current_value: 9.99
+  progress: 9.99
+  key_result: one
+  owner: one
+
+two:
+  name: MyString
+  description: MyText
+  start_date: 2022-07-27
+  end_date: 2022-07-27
+  type_metric: MyString
+  strat_value: 9.99
+  target: 9.99
+  current_value: 9.99
+  progress: 9.99
+  key_result: two
+  owner: two

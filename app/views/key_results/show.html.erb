@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @key_result %>
+
+<div>
+  <%= link_to "Edit this key result", edit_key_result_path(@key_result) %> |
+  <%= link_to "Back to key results", key_results_path %>
+
+  <%= button_to "Destroy this key result", @key_result, method: :delete %>
+</div>

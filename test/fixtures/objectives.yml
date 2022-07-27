@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  average_progress: 9.99
+  organization: one
+  owner: one
+
+two:
+  name: MyString
+  description: MyText
+  average_progress: 9.99
+  organization: two
+  owner: two

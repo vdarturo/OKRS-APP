@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Key results</h1>
+
+<div id="key_results">
+  <% @key_results.each do |key_result| %>
+    <%= render key_result %>
+    <p>
+      <%= link_to "Show this key result", key_result %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New key result", new_key_result_path %>

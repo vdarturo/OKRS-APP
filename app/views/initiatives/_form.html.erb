@@ -1,0 +1,72 @@
+<%= form_with(model: initiative) do |form| %>
+  <% if initiative.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(initiative.errors.count, "error") %> prohibited this initiative from being saved:</h2>
+
+      <ul>
+        <% initiative.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :start_date, style: "display: block" %>
+    <%= form.date_field :start_date %>
+  </div>
+
+  <div>
+    <%= form.label :end_date, style: "display: block" %>
+    <%= form.date_field :end_date %>
+  </div>
+
+  <div>
+    <%= form.label :type_metric, style: "display: block" %>
+    <%= form.text_field :type_metric %>
+  </div>
+
+  <div>
+    <%= form.label :strat_value, style: "display: block" %>
+    <%= form.text_field :strat_value %>
+  </div>
+
+  <div>
+    <%= form.label :target, style: "display: block" %>
+    <%= form.text_field :target %>
+  </div>
+
+  <div>
+    <%= form.label :current_value, style: "display: block" %>
+    <%= form.text_field :current_value %>
+  </div>
+
+  <div>
+    <%= form.label :progress, style: "display: block" %>
+    <%= form.text_field :progress %>
+  </div>
+
+  <div>
+    <%= form.label :key_result_id, style: "display: block" %>
+    <%= form.text_field :key_result_id %>
+  </div>
+
+  <div>
+    <%= form.label :owner_id, style: "display: block" %>
+    <%= form.text_field :owner_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
