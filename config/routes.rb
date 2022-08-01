@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'organization', to: 'organization#index'
+  resources :organizations
+  #get 'organization', to: 'organization#index'
   resources :initiatives
   resources :key_results
   resources :objectives

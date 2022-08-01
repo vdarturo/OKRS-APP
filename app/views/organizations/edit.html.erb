@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-3">
+    <div class="card">
+      <div class="card-header">
+        <h4>Editing organization</h4>
+      </div>
+      <div class="card-body">
+        <%= render "form", organization: @organization %>
+      </div>
+    </div>
+    <br>
+    <div>
+      <%= link_to "Back to owners", owners_path %>
+    </div>
+  </div>
+  <div class="col-5"></div>
+</div>

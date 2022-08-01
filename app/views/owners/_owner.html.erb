@@ -2,11 +2,11 @@
   <div class="row">
     <div class="col-12">
       <%= label_tag "User" %>
-      <%= text_field_tag "user", @user.email, class:"form-control w-100" %>
+      
     </div>
     <div class="col-12">
       <%= label_tag "Name" %>
-      <%= text_field_tag "name", owner.name, class:"form-control w-100" %>
+      <%= text_field_tag "name", owner.name, class:"form-control w-100", readonly: true %>
     </div>
   </div>
 </div>

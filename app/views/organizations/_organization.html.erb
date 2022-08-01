@@ -1,0 +1,17 @@
+<div id="<%= dom_id organization %>">
+  
+  <div class="row">
+    <div class="col-12">
+      <%= label_tag "Name" %>
+      <%= text_field_tag "user", organization.name, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-12">
+      <%= label_tag "Mission" %>
+      <%= text_area_tag "user", organization.mision, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-12">
+      <%= label_tag "Vision" %>
+      <%= text_area_tag "user", organization.vision, class:"form-control w-100", readonly: true %>
+    </div>
+  </div>
+</div>

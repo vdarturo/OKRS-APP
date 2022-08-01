@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_27_181813) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_01_145100) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -97,8 +97,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_27_181813) do
   add_foreign_key "initiatives", "owners"
   add_foreign_key "key_results", "objectives"
   add_foreign_key "key_results", "owners"
-  add_foreign_key "objectives", "organizations"
   add_foreign_key "objectives", "owners"
-  add_foreign_key "owners", "organizations"
   add_foreign_key "owners", "users"
 end

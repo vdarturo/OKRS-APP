@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header">
+        <h4>Organization</h4>
+      </div>
+      <div class="card-body">
+        <% @organizations.each do |organization| %>
+          <%= render organization %>
+          <div class="col text-right p-2">
+            <%= button_to "Update", edit_organization_path(organization.id), class:"btn btn-success", method: :get%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-4"></div>
+</div>
+
+<!--<div id="organizations">
+  <% @organizations.each do |organization| %>
+    <%= render organization %>
+    <p>
+      <%= link_to "Show this organization", organization %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New organization", new_organization_path %>-->
