@@ -1,7 +1,8 @@
 <%= form_with(model: owner) do |form| %>
   <% if owner.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(owner.errors.count, "error") %> prohibited this owner from being saved:</h2>
+    <!--<div style="color: red">-->
+    <div class="alert alert-danger" role="alert">
+      <p><%= pluralize(owner.errors.count, "error") %> prohibited this owner from being saved:</p>
 
       <ul>
         <% owner.errors.each do |error| %>
@@ -14,20 +15,17 @@
   <div class="row">
     <div class="col-12">
       <%= form.label :user_id, style: "display: block" %>
-      <%= form.text_field :user_id, class:"w-100" %>
+      <!--<%= form.text_field :user_id, class:"w-100" %>-->
+      <%= select_tag :user_id, options_for_select(@options), class:"form-control"%>
     </div>
     <div class="col-12">
       <%= form.label :name, style: "display: block" %>
-      <%= form.text_field :name, class:"w-100" %>
+      <%= form.text_field :name, class:"form-control w-100" %>
     </div>
     <div class="col-12 text-right p-2">
-      <%= form.submit%>
+      <%= form.submit nil, class:"btn btn-success"%>
     </div>
+    <%= hidden_field_tag :organization_id, "1" %>
   </div>
-  
-  <!--<div>
-    <%= form.label :organization_id, style: "display: block" %>
-    <%= form.text_field :organization_id %>
-  </div>-->
 
 <% end %>

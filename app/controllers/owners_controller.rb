@@ -8,20 +8,27 @@ class OwnersController < ApplicationController
 
   # GET /owners/1 or /owners/1.json
   def show
+    @user= User.find(params[:id])
   end
 
   # GET /owners/new
   def new
     @owner = Owner.new
+    users = User.all
+    @options = users.map{|user| [user.email, user.id]}
   end
 
   # GET /owners/1/edit
   def edit
+    users = User.all
+    @options = users.map{|user| [user.email, user.id]}
   end
 
   # POST /owners or /owners.json
   def create
-    @owner = Owner.new(owner_params)
+    @owner = Owner.create(user_id: params[:user_id], organization_id: params[:organization_id], name: params[:owner][:name])
+    users = User.all
+    @options = users.map{|user| [user.email, user.id]}
 
     respond_to do |format|
       if @owner.save
@@ -36,6 +43,8 @@ class OwnersController < ApplicationController
 
   # PATCH/PUT /owners/1 or /owners/1.json
   def update
+    users = User.all
+    @options = users.map{|user| [user.email, user.id]}
     respond_to do |format|
       if @owner.update(owner_params)
         format.html { redirect_to owner_url(@owner), notice: "Owner was successfully updated." }

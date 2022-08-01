@@ -1,7 +1,43 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Owners</h1>
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-10">
+            <h4>Owners</h4>
+          </div>
+          <div class="col text-right">
+            <%= link_to "New", new_owner_path, class:"btn btn-success" %>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <% @owners.each do |owner| %>
+          <div class="row">
+            <div class="col-7">
+              <%= owner.name %>
+            </div>
+            <div class="col text-right">
+              <%= button_to "Show", owner_path(owner.id), class:"btn btn-success", method: :get%>
+            </div>
+            <div class="col text-right">
+              <%= button_to "Update", edit_owner_path(owner.id), class:"btn btn-success", method: :get%>
+            </div>
+            <div class="col text-right">
+              <%= button_to "Delete", owner, class:"btn btn-success", method: :delete %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-3"></div>
+</div>
 
+<!--
 <div id="owners">
   <% @owners.each do |owner| %>
     <%= render owner %>
@@ -12,3 +48,4 @@
 </div>
 
 <%= link_to "New owner", new_owner_path %>
+-->

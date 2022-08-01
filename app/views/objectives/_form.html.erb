@@ -14,19 +14,19 @@
   <div class="row">
     <div class="col-6">
       <%= form.label :name, style: "display: block" %>
-      <%= form.text_field :name, class:"w-100" %>
+      <%= form.text_field :name, class:"form-control w-100" %>
     </div>
     <div class="col-6">
       <%= form.label :owner_id, style: "display: block" %>
-      <%= form.text_field :owner_id, class:"w-100" %>
+      <%= form.text_field :owner_id, class:"form-control w-100" %>
     </div>
     <div class="col-12">
       <%= form.label :description, style: "display: block" %>
-      <%= form.text_area :description, class:"w-100" %>
+      <%= form.text_area :description, class:"form-control w-100" %>
     </div>
     <div class="col-9"></div>
-    <div class="col-3 text-right">
-      <%= form.submit %>
+    <div class="col-3 text-right p-2">
+      <%= form.submit nil, class:"btn btn-success" %>
     </div>
   </div>
 
