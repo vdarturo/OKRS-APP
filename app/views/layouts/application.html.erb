@@ -29,21 +29,21 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+            <li class="nav-item">
+              <%= link_to root_path, class: "nav-link"  do %>
+                <i class="fas fa-fw fa-tags"></i>
+                <span>Dashboard</span>
+              <%end%>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Propósito</span></a>
+              <%= link_to "organization", class: "nav-link"  do %>
+                <i class="fas fa-fw fa-tags"></i>
+                <span>Purpose</span>
+              <%end%>
             </li>
 
             <!-- Divider -->
@@ -52,7 +52,7 @@
             <li class="nav-item">
               <%= link_to objectives_path, class: "nav-link"  do %>
                 <i class="fas fa-fw fa-tags"></i>
-                <span>Estrategía</span>
+                <span>Strategy</span>
               <%end%>
             </li>
 
@@ -62,7 +62,7 @@
             <li class="nav-item">
               <%= link_to key_results_path, class: "nav-link"  do %>
                 <i class="fas fa-fw fa-tags"></i>
-                <span>Táctica</span>
+                <span>Tactic</span>
               <%end%>
             </li>
 
@@ -72,7 +72,7 @@
             <li class="nav-item">
               <%= link_to initiatives_path, class: "nav-link"  do %>
                 <i class="fas fa-fw fa-tags"></i>
-                <span>Operación</span>
+                <span>Operation</span>
               <%end%>
             </li>
 
@@ -82,7 +82,7 @@
             <li class="nav-item">
               <%= link_to owners_path, class: "nav-link"  do %>
                 <i class="fas fa-fw fa-tags"></i>
-                <span>Responsables</span>
+                <span>Owners</span>
               <%end%>
             </li>
 

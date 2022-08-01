@@ -1,9 +1,20 @@
-<h1>New key result</h1>
+<!--<h1>New key result</h1>-->
 
-<%= render "form", key_result: @key_result %>
-
-<br>
-
-<div>
-  <%= link_to "Back to key results", key_results_path %>
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-header">
+        New key result
+      </div>
+      <div class="card-body">
+        <%= render "form", key_result: @key_result %>
+      </div>
+    </div>
+    <br>
+    <div>
+      <%= link_to "Back to key results", key_results_path %>
+    </div>
+  </div>
+  <div class="col-3"></div>
 </div>

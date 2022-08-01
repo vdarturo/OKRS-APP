@@ -10,63 +10,56 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  
+  <div class="row">
+    <div class="col-6">
+      <%= form.label :key_result_id, style: "display: block" %>
+      <%= form.text_field :key_result_id, class:"w-100" %>
+    </div>
+    <div class="col-6">
+      <%= form.label :owner_id, style: "display: block" %>
+      <%= form.text_field :owner_id, class:"w-100" %>
+    </div>
+    <div class="col-6">
+      <%= form.label :name, style: "display: block" %>
+      <%= form.text_field :name, class:"w-100" %>
+    </div>
+    <div class="col-3">
+      <%= form.label :start_date, style: "display: block" %>
+      <%= form.date_field :start_date %>
+    </div>
+    <div class="col-3">
+      <%= form.label :end_date, style: "display: block" %>
+      <%= form.date_field :end_date %>
+    </div>
+    <div class="col-3">
+      <%= form.label :type_metric, style: "display: block" %>
+      <%= form.text_field :type_metric %>
+    </div>
+    <div class="col-3">
+      <%= form.label :strat_value, style: "display: block" %>
+      <%= form.text_field :strat_value %>
+    </div>
+    <div class="col-3">
+      <%= form.label :target, style: "display: block" %>
+      <%= form.text_field :target %>
+    </div>
+    <div class="col-3">
+      <%= form.label :current_value, style: "display: block" %>
+      <%= form.text_field :current_value %>
+    </div>
+    <div class="col-12">
+      <%= form.label :description, style: "display: block" %>
+      <%= form.text_area :description, class:"w-100" %>
+    </div>
+    <div class="col-9 p-2"></div>
+    <div class="col-3 text-right">
+      <%= form.submit %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.label :start_date, style: "display: block" %>
-    <%= form.date_field :start_date %>
-  </div>
-
-  <div>
-    <%= form.label :end_date, style: "display: block" %>
-    <%= form.date_field :end_date %>
-  </div>
-
-  <div>
-    <%= form.label :type_metric, style: "display: block" %>
-    <%= form.text_field :type_metric %>
-  </div>
-
-  <div>
-    <%= form.label :strat_value, style: "display: block" %>
-    <%= form.text_field :strat_value %>
-  </div>
-
-  <div>
-    <%= form.label :target, style: "display: block" %>
-    <%= form.text_field :target %>
-  </div>
-
-  <div>
-    <%= form.label :current_value, style: "display: block" %>
-    <%= form.text_field :current_value %>
-  </div>
-
-  <div>
+  <!--<div>
     <%= form.label :progress, style: "display: block" %>
     <%= form.text_field :progress %>
-  </div>
-
-  <div>
-    <%= form.label :key_result_id, style: "display: block" %>
-    <%= form.text_field :key_result_id %>
-  </div>
-
-  <div>
-    <%= form.label :owner_id, style: "display: block" %>
-    <%= form.text_field :owner_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+  </div>-->
 <% end %>

@@ -11,32 +11,33 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="row">
+    <div class="col-6">
+      <%= form.label :name, style: "display: block" %>
+      <%= form.text_field :name, class:"w-100" %>
+    </div>
+    <div class="col-6">
+      <%= form.label :owner_id, style: "display: block" %>
+      <%= form.text_field :owner_id, class:"w-100" %>
+    </div>
+    <div class="col-12">
+      <%= form.label :description, style: "display: block" %>
+      <%= form.text_area :description, class:"w-100" %>
+    </div>
+    <div class="col-9"></div>
+    <div class="col-3 text-right">
+      <%= form.submit %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
+  <!--<div>
     <%= form.label :average_progress, style: "display: block" %>
     <%= form.text_field :average_progress %>
-  </div>
+  </div>-->
 
-  <div>
+  <!--<div>
     <%= form.label :organization_id, style: "display: block" %>
     <%= form.text_field :organization_id %>
-  </div>
+  </div>-->
 
-  <div>
-    <%= form.label :owner_id, style: "display: block" %>
-    <%= form.text_field :owner_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

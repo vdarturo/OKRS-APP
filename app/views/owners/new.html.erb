@@ -1,9 +1,19 @@
-<h1>New owner</h1>
-
-<%= render "form", owner: @owner %>
-
-<br>
-
-<div>
-  <%= link_to "Back to owners", owners_path %>
+<!--<h1>New owner</h1>-->
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-3">
+    <div class="card">
+      <div class="card-header">
+        New owner
+      </div>
+      <div class="card-body">
+        <%= render "form", owner: @owner %>
+      </div>
+    </div>
+    <br>
+    <div>
+      <%= link_to "Back to owners", owners_path %>
+    </div>
+  </div>
+  <div class="col-5"></div>
 </div>
