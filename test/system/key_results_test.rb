@@ -21,7 +21,7 @@ class KeyResultsTest < ApplicationSystemTestCase
     fill_in "Owner", with: @key_result.owner_id
     fill_in "Period", with: @key_result.period
     fill_in "Progress", with: @key_result.progress
-    fill_in "Strat value", with: @key_result.strat_value
+    fill_in "Strat value", with: @key_result.start_value
     fill_in "Target", with: @key_result.target
     fill_in "Type metric", with: @key_result.type_metric
     click_on "Create Key result"
@@ -41,7 +41,7 @@ class KeyResultsTest < ApplicationSystemTestCase
     fill_in "Owner", with: @key_result.owner_id
     fill_in "Period", with: @key_result.period
     fill_in "Progress", with: @key_result.progress
-    fill_in "Strat value", with: @key_result.strat_value
+    fill_in "Strat value", with: @key_result.start_value
     fill_in "Target", with: @key_result.target
     fill_in "Type metric", with: @key_result.type_metric
     click_on "Update Key result"

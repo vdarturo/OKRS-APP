@@ -8,6 +8,11 @@
       <%= label_tag "Owner" %>
       <%= text_field_tag "name", @owner.name, class:"form-control w-100", readonly: true %>
     </div>
+    <div class="col-3">
+      <%= label_tag "Average progress" %>
+      <%= text_field_tag "average_progress", objective.average_progress, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-3"></div>
     <div class="col-12">      
       <%= label_tag "Description" %>      
       <%= text_area_tag "description", objective.description, class:"form-control w-100", readonly: true %>

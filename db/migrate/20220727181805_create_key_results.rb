@@ -5,7 +5,7 @@ class CreateKeyResults < ActiveRecord::Migration[7.0]
       t.text :description
       t.string :period
       t.string :type_metric
-      t.decimal :strat_value
+      t.decimal :start_value
       t.decimal :target
       t.decimal :current_value
       t.decimal :progress

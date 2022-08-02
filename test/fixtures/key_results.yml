@@ -5,7 +5,7 @@ one:
   description: MyText
   period: MyString
   type_metric: MyString
-  strat_value: 9.99
+  start_value: 9.99
   target: 9.99
   current_value: 9.99
   progress: 9.99
@@ -17,7 +17,7 @@ two:
   description: MyText
   period: MyString
   type_metric: MyString
-  strat_value: 9.99
+  start_value: 9.99
   target: 9.99
   current_value: 9.99
   progress: 9.99

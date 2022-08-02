@@ -14,11 +14,11 @@
   <div class="row">
     <div class="col-6">
       <%= form.label :key_result_id, style: "display: block" %>
-      <%= form.text_field :key_result_id, class:"form-control w-100" %>
+      <%= select_tag :key_result_id, options_for_select(@key_results), class:"form-control"%>
     </div>
     <div class="col-6">
       <%= form.label :owner_id, style: "display: block" %>
-      <%= form.text_field :owner_id, class:"form-control w-100" %>
+      <%= select_tag :owner_id, options_for_select(@owners), class:"form-control"%>
     </div>
     <div class="col-6">
       <%= form.label :name, style: "display: block" %>
@@ -37,8 +37,8 @@
       <%= form.text_field :type_metric, class:"form-control" %>
     </div>
     <div class="col-3">
-      <%= form.label :strat_value, style: "display: block" %>
-      <%= form.text_field :strat_value, class:"form-control" %>
+      <%= form.label :start_value, style: "display: block" %>
+      <%= form.text_field :start_value, class:"form-control" %>
     </div>
     <div class="col-3">
       <%= form.label :target, style: "display: block" %>
@@ -48,6 +48,11 @@
       <%= form.label :current_value, style: "display: block" %>
       <%= form.text_field :current_value, class:"form-control" %>
     </div>
+    <div class="col-3">
+      <%= form.label :progress, style: "display: block" %>
+      <%= form.text_field :progress, class:"form-control" %>
+    </div>
+    <div class="col-9"></div>
     <div class="col-12">
       <%= form.label :description, style: "display: block" %>
       <%= form.text_area :description, class:"form-control w-100" %>
@@ -57,9 +62,4 @@
       <%= form.submit nil, class:"btn btn-success" %>
     </div>
   </div>
-
-  <!--<div>
-    <%= form.label :progress, style: "display: block" %>
-    <%= form.text_field :progress %>
-  </div>-->
 <% end %>

@@ -42,10 +42,10 @@ class KeyResultsController < ApplicationController
       description: params[:key_result][:description],
       period: params[:key_result][:period],
       type_metric: params[:key_result][:type_metric],
-      strat_value: params[:key_result][:strat_value],
+      start_value: params[:key_result][:start_value],
       target: params[:key_result][:target],
       current_value: params[:key_result][:current_value],
-      progress: 0,
+      progress: params[:key_result][:progress],
       owner_id: params[:owner_id],
       objective_id: params[:objective_id]
     )
@@ -92,6 +92,6 @@ class KeyResultsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def key_result_params
-      params.require(:key_result).permit(:name, :description, :period, :type_metric, :strat_value, :target, :current_value, :progress, :objective_id, :owner_id)
+      params.require(:key_result).permit(:name, :description, :period, :type_metric, :start_value, :target, :current_value, :progress, :objective_id, :owner_id)
     end
 end

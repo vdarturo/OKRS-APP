@@ -6,7 +6,7 @@ class CreateInitiatives < ActiveRecord::Migration[7.0]
       t.date :start_date
       t.date :end_date
       t.string :type_metric
-      t.decimal :strat_value
+      t.decimal :start_value
       t.decimal :target
       t.decimal :current_value
       t.decimal :progress

@@ -22,7 +22,7 @@ class InitiativesTest < ApplicationSystemTestCase
     fill_in "Owner", with: @initiative.owner_id
     fill_in "Progress", with: @initiative.progress
     fill_in "Start date", with: @initiative.start_date
-    fill_in "Strat value", with: @initiative.strat_value
+    fill_in "Strat value", with: @initiative.start_value
     fill_in "Target", with: @initiative.target
     fill_in "Type metric", with: @initiative.type_metric
     click_on "Create Initiative"
@@ -43,7 +43,7 @@ class InitiativesTest < ApplicationSystemTestCase
     fill_in "Owner", with: @initiative.owner_id
     fill_in "Progress", with: @initiative.progress
     fill_in "Start date", with: @initiative.start_date
-    fill_in "Strat value", with: @initiative.strat_value
+    fill_in "Strat value", with: @initiative.start_value
     fill_in "Target", with: @initiative.target
     fill_in "Type metric", with: @initiative.type_metric
     click_on "Update Initiative"

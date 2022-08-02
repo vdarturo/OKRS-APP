@@ -6,7 +6,7 @@ one:
   start_date: 2022-07-27
   end_date: 2022-07-27
   type_metric: MyString
-  strat_value: 9.99
+  start_value: 9.99
   target: 9.99
   current_value: 9.99
   progress: 9.99
@@ -19,7 +19,7 @@ two:
   start_date: 2022-07-27
   end_date: 2022-07-27
   type_metric: MyString
-  strat_value: 9.99
+  start_value: 9.99
   target: 9.99
   current_value: 9.99
   progress: 9.99

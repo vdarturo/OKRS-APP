@@ -8,27 +8,28 @@ class OwnersController < ApplicationController
 
   # GET /owners/1 or /owners/1.json
   def show
-    @user= User.find(params[:id])
+    owner= Owner.find(params[:id])
+    @user = User.find(owner.user_id)
   end
 
   # GET /owners/new
   def new
     @owner = Owner.new
     users = User.all
-    @options = users.map{|user| [user.email, user.id]}
+    @users = users.map{|user| [user.email, user.id]}
   end
 
   # GET /owners/1/edit
   def edit
     users = User.all
-    @options = users.map{|user| [user.email, user.id]}
+    @users = users.map{|user| [user.email, user.id]}
   end
 
   # POST /owners or /owners.json
   def create
     @owner = Owner.create(user_id: params[:user_id], organization_id: params[:organization_id], name: params[:owner][:name])
     users = User.all
-    @options = users.map{|user| [user.email, user.id]}
+    @users = users.map{|user| [user.email, user.id]}
 
     respond_to do |format|
       if @owner.save

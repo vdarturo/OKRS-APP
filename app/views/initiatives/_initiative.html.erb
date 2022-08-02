@@ -1,57 +1,51 @@
 <div id="<%= dom_id initiative %>">
-  <p>
-    <strong>Name:</strong>
-    <%= initiative.name %>
-  </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= initiative.description %>
-  </p>
-
-  <p>
-    <strong>Start date:</strong>
-    <%= initiative.start_date %>
-  </p>
-
-  <p>
-    <strong>End date:</strong>
-    <%= initiative.end_date %>
-  </p>
-
-  <p>
-    <strong>Type metric:</strong>
-    <%= initiative.type_metric %>
-  </p>
-
-  <p>
-    <strong>Strat value:</strong>
-    <%= initiative.strat_value %>
-  </p>
-
-  <p>
-    <strong>Target:</strong>
-    <%= initiative.target %>
-  </p>
-
-  <p>
-    <strong>Current value:</strong>
-    <%= initiative.current_value %>
-  </p>
-
-  <p>
-    <strong>Progress:</strong>
-    <%= initiative.progress %>
-  </p>
-
-  <p>
-    <strong>Key result:</strong>
-    <%= initiative.key_result_id %>
-  </p>
-
-  <p>
-    <strong>Owner:</strong>
-    <%= initiative.owner_id %>
-  </p>
-
+  <div class="row">
+    <div class="col-6">
+      <%= label_tag "Key result" %>
+      <%= text_field_tag "key_result", @key_result.name, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-6">
+      <%= label_tag "Owner" %>
+      <%= text_field_tag "owner", @owner.name, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-6">
+      <%= label_tag "Name" %>
+      <%= text_field_tag "name", initiative.name, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Start date" %>
+      <%= text_field_tag "start_date", initiative.start_date, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "End date" %>
+      <%= text_field_tag "end_date", initiative.end_date, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Type metric" %>
+      <%= text_field_tag "type_metric", initiative.type_metric, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Start value" %>
+      <%= text_field_tag "start_value", initiative.start_value, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Target" %>
+      <%= text_field_tag "target", initiative.target, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Current value" %>
+      <%= text_field_tag "current_value", initiative.current_value, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Progress" %>
+      <%= text_field_tag "progress", initiative.progress, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-9"></div>
+    <div class="col-12">
+      <%= label_tag "Description" %>
+      <%= text_area_tag "description", initiative.description, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-9"></div>
+  </div>
 </div>

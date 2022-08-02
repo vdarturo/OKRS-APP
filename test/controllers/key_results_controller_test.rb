@@ -17,7 +17,7 @@ class KeyResultsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create key_result" do
     assert_difference("KeyResult.count") do
-      post key_results_url, params: { key_result: { current_value: @key_result.current_value, description: @key_result.description, name: @key_result.name, objective_id: @key_result.objective_id, owner_id: @key_result.owner_id, period: @key_result.period, progress: @key_result.progress, strat_value: @key_result.strat_value, target: @key_result.target, type_metric: @key_result.type_metric } }
+      post key_results_url, params: { key_result: { current_value: @key_result.current_value, description: @key_result.description, name: @key_result.name, objective_id: @key_result.objective_id, owner_id: @key_result.owner_id, period: @key_result.period, progress: @key_result.progress, start_value: @key_result.start_value, target: @key_result.target, type_metric: @key_result.type_metric } }
     end
 
     assert_redirected_to key_result_url(KeyResult.last)
@@ -34,7 +34,7 @@ class KeyResultsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update key_result" do
-    patch key_result_url(@key_result), params: { key_result: { current_value: @key_result.current_value, description: @key_result.description, name: @key_result.name, objective_id: @key_result.objective_id, owner_id: @key_result.owner_id, period: @key_result.period, progress: @key_result.progress, strat_value: @key_result.strat_value, target: @key_result.target, type_metric: @key_result.type_metric } }
+    patch key_result_url(@key_result), params: { key_result: { current_value: @key_result.current_value, description: @key_result.description, name: @key_result.name, objective_id: @key_result.objective_id, owner_id: @key_result.owner_id, period: @key_result.period, progress: @key_result.progress, start_value: @key_result.start_value, target: @key_result.target, type_metric: @key_result.type_metric } }
     assert_redirected_to key_result_url(@key_result)
   end
 

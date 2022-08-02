@@ -17,7 +17,7 @@ class InitiativesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create initiative" do
     assert_difference("Initiative.count") do
-      post initiatives_url, params: { initiative: { current_value: @initiative.current_value, description: @initiative.description, end_date: @initiative.end_date, key_result_id: @initiative.key_result_id, name: @initiative.name, owner_id: @initiative.owner_id, progress: @initiative.progress, start_date: @initiative.start_date, strat_value: @initiative.strat_value, target: @initiative.target, type_metric: @initiative.type_metric } }
+      post initiatives_url, params: { initiative: { current_value: @initiative.current_value, description: @initiative.description, end_date: @initiative.end_date, key_result_id: @initiative.key_result_id, name: @initiative.name, owner_id: @initiative.owner_id, progress: @initiative.progress, start_date: @initiative.start_date, start_value: @initiative.start_value, target: @initiative.target, type_metric: @initiative.type_metric } }
     end
 
     assert_redirected_to initiative_url(Initiative.last)
@@ -34,7 +34,7 @@ class InitiativesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update initiative" do
-    patch initiative_url(@initiative), params: { initiative: { current_value: @initiative.current_value, description: @initiative.description, end_date: @initiative.end_date, key_result_id: @initiative.key_result_id, name: @initiative.name, owner_id: @initiative.owner_id, progress: @initiative.progress, start_date: @initiative.start_date, strat_value: @initiative.strat_value, target: @initiative.target, type_metric: @initiative.type_metric } }
+    patch initiative_url(@initiative), params: { initiative: { current_value: @initiative.current_value, description: @initiative.description, end_date: @initiative.end_date, key_result_id: @initiative.key_result_id, name: @initiative.name, owner_id: @initiative.owner_id, progress: @initiative.progress, start_date: @initiative.start_date, start_value: @initiative.start_value, target: @initiative.target, type_metric: @initiative.type_metric } }
     assert_redirected_to initiative_url(@initiative)
   end
 

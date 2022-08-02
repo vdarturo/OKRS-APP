@@ -30,7 +30,13 @@ class ObjectivesController < ApplicationController
     owners = Owner.all
     @options = owners.map{|owner| [owner.name, owner.id]}
     owner = Owner.find(params[:owner_id])
-    @objective = Objective.create(name: params[:objective][:name], description: params[:objective][:description], average_progress: 0, owner_id: owner.id, organization_id: owner.organization_id)
+    @objective = Objective.create(
+      name: params[:objective][:name],
+      description: params[:objective][:description],
+      average_progress: params[:objective][:average_progress],
+      owner_id: owner.id,
+      organization_id: owner.organization_id
+    )
 
     respond_to do |format|
       if @objective.save
