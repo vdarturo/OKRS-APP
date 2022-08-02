@@ -25,3 +25,11 @@ Ejecute rails db:migrate
 
 ## Database
 ![Database OKRs](/app/assets/images/database.svg)
+
+# Use application
+First change data organization in Organization modulo, then you need create owner(s), in this case every user have only a owner, when you have owner(s) you can configure the next modules in this order:
+1. Objetives
+2. Key Results
+3. Initiatives
+
+In the Dashboard module, you can see all progress of your strategic plan
