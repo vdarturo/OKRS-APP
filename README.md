@@ -1,24 +1,27 @@
-# README
+# ORKs App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+OKRs (Objectives and Key Results) are a quarterly goal-setting framework for companies to drive growth, innovation, and improvement. OKRs focus on the most important areas that need improvement and help you deliver valuable outcomes for the business. 
 
-Things you may want to cover:
+OKRs are based on two essential elements:
 
-* Ruby version
+- The Objective is a qualitative goal that defines what you want to improve.
+- The Key Results are business outcomes that specify how you’ll know if you have progressed towards the Objective.
 
-* System dependencies
+Two other crucial elements of the OKR process are Initiatives and Weekly Check-ins — the ways you actually drive your OKRs and track the progress:
 
-* Configuration
+- The Initiatives include all the projects and plans that will help you achieve your Team Objectives, 
+- The Weekly Check-ins drive your OKRs forward by focusing your attention on what you need to do during one week.
 
-* Database creation
+![Example OKRs](/app/assets/images/example_okrs.png)
 
-* Database initialization
 
-* How to run the test suite
+# Installation
 
-* Services (job queues, cache servers, search engines, etc.)
+## Database creation
+Ejecute rake db:create
 
-* Deployment instructions
+## Database initialization
+Ejecute rails db:migrate
 
-* ...
+## Database
+![Database OKRs](/app/assets/images/database.svg)

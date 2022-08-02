@@ -97,6 +97,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_01_145100) do
   add_foreign_key "initiatives", "owners"
   add_foreign_key "key_results", "objectives"
   add_foreign_key "key_results", "owners"
+  add_foreign_key "objectives", "organizations"
   add_foreign_key "objectives", "owners"
+  add_foreign_key "owners", "organizations"
   add_foreign_key "owners", "users"
 end
