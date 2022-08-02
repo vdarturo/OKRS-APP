@@ -1,10 +1,18 @@
-<h1>Editing key result</h1>
-
-<%= render "form", key_result: @key_result %>
-
-<br>
-
-<div>
-  <%= link_to "Show this key result", @key_result %> |
-  <%= link_to "Back to key results", key_results_path %>
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-header">
+        <h4>Editing key result</h4>
+      </div>
+      <div class="card-body">
+        <%= render "form", key_result: @key_result %>
+      </div>
+    </div>
+    <br>
+    <div>
+      <%= link_to "Back to key results", key_results_path %>
+    </div>
+  </div>
+  <div class="col-3"></div>
 </div>

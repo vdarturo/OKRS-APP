@@ -1,6 +1,5 @@
 <%= form_with(model: owner) do |form| %>
   <% if owner.errors.any? %>
-    <!--<div style="color: red">-->
     <div class="alert alert-danger" role="alert">
       <p><%= pluralize(owner.errors.count, "error") %> prohibited this owner from being saved:</p>
 

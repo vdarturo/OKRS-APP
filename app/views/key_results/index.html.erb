@@ -1,14 +1,41 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Táctica</h1>
-
-<div id="key_results">
-  <% @key_results.each do |key_result| %>
-    <%= render key_result %>
-    <p>
-      <%= link_to "Show this key result", key_result %>
-    </p>
-  <% end %>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-10">
+            <h4>Key Results</h4>
+          </div>
+          <div class="col text-right">
+            <%= link_to "New", new_key_result_path, class:"btn btn-success" %>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <% @key_results.each do |key_result| %>
+          <div class="row p-2">
+            <div class="col-7">
+              <%= key_result.name %>
+            </div>
+            <div class="col">
+              <%= key_result.progress %>
+            </div>
+            <div class="col text-right">
+              <%= button_to "Show", key_result_path(key_result.id), class:"btn btn-success", method: :get%>
+            </div>
+            <div class="col text-right">
+              <%= button_to "Update", edit_key_result_path(key_result.id), class:"btn btn-success", method: :get%>
+            </div>
+            <div class="col text-right">
+              <%= button_to "Delete", key_result, class:"btn btn-success", method: :delete %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-2"></div>
 </div>
-
-<%= link_to "New key result", new_key_result_path %>

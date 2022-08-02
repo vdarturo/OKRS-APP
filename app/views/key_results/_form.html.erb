@@ -1,7 +1,7 @@
 <%= form_with(model: key_result) do |form| %>
   <% if key_result.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(key_result.errors.count, "error") %> prohibited this key_result from being saved:</h2>
+    <div class="alert alert-danger" role="alert">
+      <p><%= pluralize(key_result.errors.count, "error") %> prohibited this key_result from being saved:</p>
 
       <ul>
         <% key_result.errors.each do |error| %>
@@ -14,11 +14,13 @@
   <div class="row">
     <div class="col-6">
       <%= form.label :objective_id, style: "display: block" %>
-      <%= form.text_field :objective_id, class:"form-control w-100" %>
+      <%= select_tag :objective_id, options_for_select(@objectives), class:"form-control"%>
     </div>
-    <div class="col-6">
+    <div class="col-3">
       <%= form.label :period, style: "display: block" %>
       <%= form.text_field :period, class:"form-control" %>
+    </div>
+    <div class="col-3">
     </div>
     <div class="col-6">
       <%= form.label :name, style: "display: block" %>
@@ -26,7 +28,7 @@
     </div>
     <div class="col-6">
       <%= form.label :owner_id, style: "display: block" %>
-      <%= form.text_field :owner_id, class:"form-control w-100" %>
+      <%= select_tag :owner_id, options_for_select(@owners), class:"form-control"%>
     </div>
     <div class="col-3">
       <%= form.label :type_metric, style: "display: block" %>
@@ -53,10 +55,5 @@
       <%= form.submit nil, class:"btn btn-success" %>
     </div>
   </div>
-
-  <!--<div>
-    <%= form.label :progress, style: "display: block" %>
-    <%= form.text_field :progress %>
-  </div>-->
 
 <% end %>

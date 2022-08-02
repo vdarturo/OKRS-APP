@@ -1,52 +1,49 @@
 <div id="<%= dom_id key_result %>">
-  <p>
-    <strong>Name:</strong>
-    <%= key_result.name %>
-  </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= key_result.description %>
-  </p>
-
-  <p>
-    <strong>Period:</strong>
-    <%= key_result.period %>
-  </p>
-
-  <p>
-    <strong>Type metric:</strong>
-    <%= key_result.type_metric %>
-  </p>
-
-  <p>
-    <strong>Strat value:</strong>
-    <%= key_result.strat_value %>
-  </p>
-
-  <p>
-    <strong>Target:</strong>
-    <%= key_result.target %>
-  </p>
-
-  <p>
-    <strong>Current value:</strong>
-    <%= key_result.current_value %>
-  </p>
-
-  <p>
-    <strong>Progress:</strong>
-    <%= key_result.progress %>
-  </p>
-
-  <p>
-    <strong>Objective:</strong>
-    <%= key_result.objective_id %>
-  </p>
-
-  <p>
-    <strong>Owner:</strong>
-    <%= key_result.owner_id %>
-  </p>
-
+  <div class="row">
+    <div class="col-6">
+      <%= label_tag "Objective" %>
+      <%= text_field_tag "objective", @objective.name, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Period" %>
+      <%= text_field_tag "period", key_result.period, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Progress" %>
+      <%= text_field_tag "progress", key_result.progress, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-6">
+      <%= label_tag "Name" %>
+      <%= text_field_tag "name", key_result.name, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-6">
+      <%= label_tag "Owner" %>
+      <%= text_field_tag "owner", @owner.name, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Type metric" %>
+      <%= text_field_tag "period", key_result.type_metric, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Start value" %>
+      <%= text_field_tag "period", key_result.strat_value, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Target" %>
+      <%= text_field_tag "period", key_result.target, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-3">
+      <%= label_tag "Current value" %>
+      <%= text_field_tag "period", key_result.current_value, class:"form-control", readonly: true %>
+    </div>
+    <div class="col-12">
+      <%= label_tag "Description" %>
+      <%= text_area_tag "description", key_result.description, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-9"></div>
+    <div class="col-3 text-right p-2">
+      
+    </div>
+  </div>
 </div>

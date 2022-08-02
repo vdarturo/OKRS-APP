@@ -8,20 +8,29 @@ class ObjectivesController < ApplicationController
 
   # GET /objectives/1 or /objectives/1.json
   def show
+    obj = Objective.find(params[:id])
+    @owner = Owner.find(obj.owner_id)
   end
 
   # GET /objectives/new
   def new
     @objective = Objective.new
+    owners = Owner.all
+    @options = owners.map{|owner| [owner.name, owner.id]}
   end
 
   # GET /objectives/1/edit
   def edit
+    owners = Owner.all
+    @options = owners.map{|owner| [owner.name, owner.id]}
   end
 
   # POST /objectives or /objectives.json
   def create
-    @objective = Objective.new(objective_params)
+    owners = Owner.all
+    @options = owners.map{|owner| [owner.name, owner.id]}
+    owner = Owner.find(params[:owner_id])
+    @objective = Objective.create(name: params[:objective][:name], description: params[:objective][:description], average_progress: 0, owner_id: owner.id, organization_id: owner.organization_id)
 
     respond_to do |format|
       if @objective.save
@@ -36,6 +45,9 @@ class ObjectivesController < ApplicationController
 
   # PATCH/PUT /objectives/1 or /objectives/1.json
   def update
+    owners = Owner.all
+    @options = owners.map{|owner| [owner.name, owner.id]}
+
     respond_to do |format|
       if @objective.update(objective_params)
         format.html { redirect_to objective_url(@objective), notice: "Objective was successfully updated." }

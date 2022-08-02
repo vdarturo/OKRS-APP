@@ -8,20 +8,47 @@ class KeyResultsController < ApplicationController
 
   # GET /key_results/1 or /key_results/1.json
   def show
+    kr = KeyResult.find(params[:id])
+    @objective = Objective.find(kr.objective_id)
+    @owner = Owner.find(kr.owner_id)
   end
 
   # GET /key_results/new
   def new
     @key_result = KeyResult.new
+    owners = Owner.all
+    @owners = owners.map{|owner| [owner.name, owner.id]}
+    objetives = Objective.all
+    @objectives = objetives.map{|obj| [obj.name, obj.id]} 
   end
 
   # GET /key_results/1/edit
   def edit
+    owners = Owner.all
+    @owners = owners.map{|owner| [owner.name, owner.id]}
+    objetives = Objective.all
+    @objectives = objetives.map{|obj| [obj.name, obj.id]}
   end
 
   # POST /key_results or /key_results.json
   def create
-    @key_result = KeyResult.new(key_result_params)
+    owners = Owner.all
+    @owners = owners.map{|owner| [owner.name, owner.id]}
+    objetives = Objective.all
+    @objectives = objetives.map{|obj| [obj.name, obj.id]}
+
+    @key_result = KeyResult.create(
+      name: params[:key_result][:name],
+      description: params[:key_result][:description],
+      period: params[:key_result][:period],
+      type_metric: params[:key_result][:type_metric],
+      strat_value: params[:key_result][:strat_value],
+      target: params[:key_result][:target],
+      current_value: params[:key_result][:current_value],
+      progress: 0,
+      owner_id: params[:owner_id],
+      objective_id: params[:objective_id]
+    )
 
     respond_to do |format|
       if @key_result.save

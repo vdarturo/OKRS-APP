@@ -1,27 +1,16 @@
 <div id="<%= dom_id objective %>">
-  <p>
-    <strong>Name:</strong>
-    <%= objective.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= objective.description %>
-  </p>
-
-  <p>
-    <strong>Average progress:</strong>
-    <%= objective.average_progress %>
-  </p>
-
-  <p>
-    <strong>Organization:</strong>
-    <%= objective.organization_id %>
-  </p>
-
-  <p>
-    <strong>Owner:</strong>
-    <%= objective.owner_id %>
-  </p>
-
+  <div class="row">
+    <div class="col-6">
+      <%= label_tag "Name" %>
+      <%= text_field_tag "name", objective.name, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-6">
+      <%= label_tag "Owner" %>
+      <%= text_field_tag "name", @owner.name, class:"form-control w-100", readonly: true %>
+    </div>
+    <div class="col-12">      
+      <%= label_tag "Description" %>      
+      <%= text_area_tag "description", objective.description, class:"form-control w-100", readonly: true %>
+    </div>    
+  </div>
 </div>
