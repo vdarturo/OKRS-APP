@@ -1,2 +1,66 @@
-<h1>Dashboard</h1>
-<p>Pendiente de trabajar</p>
+<h2>Dashboard: <%= @organization.name%></h2>
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h4 class="m-0 font-weight-bold text-primary">Purpose</h4>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-6">
+        <%= label_tag "Mission" %>
+        <%= text_area_tag "user", @organization.mision, class:"form-control w-100", readonly: true %>
+      </div>
+      <div class="col-6">
+        <%= label_tag "Vision" %>
+        <%= text_area_tag "user", @organization.vision, class:"form-control w-100", readonly: true %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h4 class="m-0 font-weight-bold text-primary">Strategy (Objectives)</h4>
+  </div>
+  <div class="card-body">
+    <% @objectives.each do |objective| %>
+      <h4 class="small font-weight-bold"><%= objective.name%><span
+              class="float-right"><%= objective.average_progress%>%</span></h4>
+      <div class="progress mb-4">
+          <div class="progress-bar bg-info" role="progressbar" style="width: <%= objective.average_progress%>%"
+            aria-valuenow=<%= objective.average_progress%> aria-valuemin="0" aria-valuemax="100"></div>
+    <% end %>
+  </div>
+</div>
+</div>
+
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h4 class="m-0 font-weight-bold text-primary">Tactic (Key Results)</h4>
+  </div>
+  <div class="card-body">
+    <% @key_results.each do |key_result| %>
+      <h4 class="small font-weight-bold"><%= key_result.name%><span
+              class="float-right"><%= key_result.progress%>%</span></h4>
+      <div class="progress mb-4">
+          <div class="progress-bar bg-info" role="progressbar" style="width: <%= ((key_result.progress*100)/key_result.target)%>%"
+            aria-valuenow=<%= ((key_result.progress*100)/key_result.target)%> aria-valuemin="0" aria-valuemax="100"></div>
+    <% end %>
+  </div>
+</div>
+</div>
+
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h4 class="m-0 font-weight-bold text-primary">Operation (Initiatives)</h4>
+  </div>
+  <div class="card-body">
+    <% @initiatives.each do |initiative| %>
+      <h4 class="small font-weight-bold"><%= initiative.name%><span
+              class="float-right"><%= ((initiative.progress*100)/initiative.target)%>%</span></h4>
+      <div class="progress mb-4">
+          <div class="progress-bar bg-info" role="progressbar" style="width: <%= ((initiative.progress*100)/initiative.target)%>%"
+            aria-valuenow=<%= ((initiative.progress*100)/initiative.target)%> aria-valuemin="0" aria-valuemax="100"></div>
+    <% end %>
+  </div>
+</div>
+
